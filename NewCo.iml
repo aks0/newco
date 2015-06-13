@@ -15,7 +15,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="YouTubeAndroidPlayerApi" level="project" />
+    <orderEntry type="library" name="google" level="project" />
+    <orderEntry type="library" name="youtube" level="project" />
   </component>
 </module>
 

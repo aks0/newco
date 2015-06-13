@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 import com.example.NewCo.model.VideoItem;
+import com.example.NewCo.search.Search;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +38,7 @@ public class NewCoActivity extends ListActivity {
 
         // assign the list adapter
         setListAdapter(mNewCoListAdapter);
+        testSearch();
     }
 
     // when an item of the list is clicked
@@ -55,5 +57,11 @@ public class NewCoActivity extends ListActivity {
         super.onDestroy();
 
         mNewCoListAdapter.releaseLoaders();
+    }
+
+    private void testSearch() {
+        Search search = new Search();
+        search.setupSearch();
+        search.searchForQuery("deepika padukone");
     }
 }

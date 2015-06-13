@@ -71,7 +71,7 @@ public class NewCoListAdapter extends BaseAdapter {
             YouTubeThumbnailView thumbnail = (YouTubeThumbnailView)
                     convertView.findViewById(R.id.thumbnail);
             thumbnail.setTag(item.getVideoId());
-            thumbnail.initialize(NewCoConstants.DEVELOPER_KEY, mThumbnailListener);
+            thumbnail.initialize(NewCoConstants.ANDROID_DEVELOPER_KEY, mThumbnailListener);
         } else {
             TextView textView = (TextView) convertView.findViewById(R.id.firstLine);
             textView.setText(item.getTitle());

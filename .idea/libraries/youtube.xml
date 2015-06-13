@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="youtube">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/youtube/google-api-services-youtube-v3-rev140-1.18.0-rc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/youtube/YouTubeAndroidPlayerApi.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
