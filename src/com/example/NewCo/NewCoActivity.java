@@ -38,7 +38,6 @@ public class NewCoActivity extends ListActivity {
 
         // assign the list adapter
         setListAdapter(mNewCoListAdapter);
-        testSearch();
     }
 
     // when an item of the list is clicked
