@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 import com.example.NewCo.model.VideoItem;
-import com.example.NewCo.search.Search;
+import com.example.NewCo.search.SearchAsyncTask;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,8 +60,6 @@ public class NewCoActivity extends ListActivity {
     }
 
     private void testSearch() {
-        Search search = new Search();
-        search.setupSearch();
-        search.searchForQuery("deepika padukone");
+        new SearchAsyncTask().execute("deepika padukone");
     }
 }
