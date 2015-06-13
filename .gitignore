@@ -28,4 +28,5 @@ proguard/
 
 # IntelliJ files
 **/.idea/workspace.xml
+
 **/.idea/tasks.xml
