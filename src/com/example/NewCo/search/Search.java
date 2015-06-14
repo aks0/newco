@@ -63,7 +63,7 @@ public class Search {
       SearchListResponse searchResponse = mSearch.execute();
       List<SearchResult> searchResultList = searchResponse.getItems();
       if (searchResultList != null) {
-        Log.d(TAG, "Results = " + searchResultList);
+        Log.d("akshay", "Results = " + searchResultList);
       }
     } catch (IOException e) {
       e.printStackTrace();
