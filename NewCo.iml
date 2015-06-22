@@ -18,6 +18,6 @@
     <orderEntry type="library" name="google" level="project" />
     <orderEntry type="library" name="youtube" level="project" />
     <orderEntry type="library" name="support" level="project" />
+    <orderEntry type="library" name="picasso" level="project" />
   </component>
 </module>
-

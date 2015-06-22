@@ -8,10 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import com.example.NewCo.model.NewCoConstants;
 import com.example.NewCo.model.VideoItem;
-import com.example.NewCo.playlist.RowItem;
-import com.example.NewCo.playlist.RowItemViewFactory;
-import com.example.NewCo.playlist.RowItemYoutube;
-import com.example.NewCo.playlist.SongType;
+import com.example.NewCo.playlist.*;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubeThumbnailLoader;
 import com.google.android.youtube.player.YouTubeThumbnailView;
@@ -65,6 +62,10 @@ public class NewCoListAdapter extends BaseAdapter {
   @Override
   public View getView(int position, View convertView, ViewGroup parent) {
     VideoItem item = mItems.get(position);
+    if (true) {
+      return (View) mRowItemViewFactory.createRowItemView(
+          new RowItemYoutube("_CMBCfxN1lU", RowItemYoutube.ThumbnailQuality.HIGH));
+    }
 
     if (convertView == null) {
       LayoutInflater layoutInflater = (LayoutInflater)

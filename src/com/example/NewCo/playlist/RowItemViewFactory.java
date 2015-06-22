@@ -1,6 +1,7 @@
 package com.example.NewCo.playlist;
 
 import android.content.Context;
+import android.net.Uri;
 
 public class RowItemViewFactory {
 
@@ -20,6 +21,14 @@ public class RowItemViewFactory {
   }
 
   private RowItemViewForYoutube createRowItemViewForYouTube(RowItemYoutube rowItem) {
-    return new RowItemViewForYoutube(mContext);
+    RowItemViewForYoutube view = new RowItemViewForYoutube(mContext);
+    Uri.Builder thumbnailUriBuilder = new Uri.Builder()
+        .scheme("https")
+        .authority("img.youtube.com")
+        .appendPath("vi")
+        .appendPath(rowItem.getUrl())
+        .appendPath(rowItem.getThumbnailQuality().quality + ".jpg");
+    view.setThumbnailSource(thumbnailUriBuilder.build());
+    return view;
   }
 }
