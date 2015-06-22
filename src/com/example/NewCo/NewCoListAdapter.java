@@ -8,6 +8,10 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import com.example.NewCo.model.NewCoConstants;
 import com.example.NewCo.model.VideoItem;
+import com.example.NewCo.playlist.RowItem;
+import com.example.NewCo.playlist.RowItemViewFactory;
+import com.example.NewCo.playlist.RowItemYoutube;
+import com.example.NewCo.playlist.SongType;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubeThumbnailLoader;
 import com.google.android.youtube.player.YouTubeThumbnailView;
@@ -21,6 +25,7 @@ public class NewCoListAdapter extends BaseAdapter {
 
   private final Context mContext;
   private final Map<YouTubeThumbnailView, YouTubeThumbnailLoader> mThumbnailViewToLoaderMap;
+  private final RowItemViewFactory mRowItemViewFactory;
   private final ThumbnailListener mThumbnailListener;
 
   private List<VideoItem> mItems = new ArrayList<VideoItem>();
@@ -28,6 +33,7 @@ public class NewCoListAdapter extends BaseAdapter {
   public NewCoListAdapter(Context context) {
     mContext = context;
     mThumbnailViewToLoaderMap = new HashMap<YouTubeThumbnailView, YouTubeThumbnailLoader>();
+    mRowItemViewFactory = new RowItemViewFactory(mContext);
     mThumbnailListener = new ThumbnailListener();
   }
 
