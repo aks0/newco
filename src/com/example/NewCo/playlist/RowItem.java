@@ -1,24 +1,8 @@
 package com.example.NewCo.playlist;
 
-import javax.annotation.concurrent.Immutable;
+import android.os.Parcelable;
 
-@Immutable
-public class RowItem {
+public interface RowItem extends Parcelable {
 
-  private final SongType mSongType;
-
-  private final String mUrl;
-
-  public RowItem(SongType songType, String url) {
-    mSongType = songType;
-    mUrl = url;
-  }
-
-  public String getUrl() {
-    return mUrl;
-  }
-
-  public SongType getSongType() {
-    return mSongType;
-  }
+  SongType getSongType();
 }
